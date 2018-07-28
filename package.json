@@ -1,0 +1,24 @@
+{
+  "name": "compile-ejs-loader",
+  "version": "0.0.1",
+  "description": "webpack loader use to compile ejs templates (without frontend dependencies)",
+  "author": "Long Wei",
+  "license": "MIT",
+  "repository": "defims/compile-ejs-loader",
+  "homepage": "https://github.com/defims/compile-ejs-loader",
+  "bugs": "https://github.com/defims/compile-ejs-loader/issues",
+  "main": "index.js",
+  "devDependencies": {
+    "ejs": "^2.6.1",
+    "html-minifier": "^3.5.19",
+    "uglify-js": "^3.4.6",
+    "webpack": "^4.16.3"
+  },
+  "peerDependencies": {
+    "webpack": "^4.16.3"
+  },
+  "dependencies": {
+    "@webpack-contrib/schema-utils": "^1.0.0-beta.0",
+    "loader-utils": "^1.1.0"
+  }
+}
