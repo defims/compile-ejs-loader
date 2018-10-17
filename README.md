@@ -40,7 +40,7 @@ besides [ejs compile options](https://github.com/mde/ejs#options), you can add t
 module: {
   rules: [{
     test: /\.ejs$/,
-    loader: 'compile-ejs-loader'
+    loader: 'compile-ejs-loader',
     options: {
       'htmlmin': true,
       'htmlminOptions': {
