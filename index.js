@@ -9,6 +9,7 @@ const htmlmin = require('html-minifier');
 const path = require('path');
 const packageJson = require('./package.json');
 const loaderName = packageJson.name || "compile-ejs-loader";
+const babel = require("@babel/core");
 
 function throwError(message) {
   const error = new Error()
@@ -18,7 +19,7 @@ function throwError(message) {
   console.error(error);
 }
 
-module.exports = function(source) { 
+module.exports = function(source) {
   const options = loaderUtils.getOptions(this) || {};
 
   if (!this.webpack) {
@@ -33,9 +34,15 @@ module.exports = function(source) {
   if(options.htmlmin) {
     source = htmlmin.minify(source, options['htmlminOptions'] || {});
   }
-
+  if (options.babelOptions != null) {
+    console.log("[WARNING] be force strict=true when use babelOptions.")
+    options.strict = true;
+  }
   var template = ejs.compile(source, options);
   var minimize = this._compiler.options.optimization.minimize;
+  if (options.babelOptions != null) {
+    template = babel.transformSync(template.toString(), options.babelOptions).code;
+  }
 
   if (!minimize && options.beautify !== false) {
     var ast = UglifyJS.parse(template.toString());

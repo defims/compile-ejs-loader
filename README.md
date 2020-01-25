@@ -34,6 +34,8 @@ besides [ejs compile options](https://github.com/mde/ejs#options), you can add t
 
 `htmlminOptions` - See [all htmlminify options reference](https://github.com/kangax/html-minifier#options-quick-reference)
 
+`babelOptions` - See [babel options](https://babeljs.io/docs/en/options)
+
 ## webpack config example
 
 ```javascript
@@ -45,6 +47,11 @@ module: {
       'htmlmin': true,
       'htmlminOptions': {
         removeComments: true
+      },
+      'babelOptions': {
+        "presets": [
+          "@babel/preset-env"
+        ]
       }
     }
   }]
