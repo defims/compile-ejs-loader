@@ -34,8 +34,8 @@ module.exports = function(source) {
   if(options.htmlmin) {
     source = htmlmin.minify(source, options['htmlminOptions'] || {});
   }
-  if (options.babelOptions != null) {
-    console.log("[WARNING] be force strict=true when use babelOptions.")
+  if (options.babelOptions != null && !options.strict) {
+    console.log("[WARNING] force strict option set true when using babelOptions.")
     options.strict = true;
   }
   var template = ejs.compile(source, options);
