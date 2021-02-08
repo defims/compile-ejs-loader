@@ -1,6 +1,6 @@
 # compile-ejs-loader for webpack
 
-[webpack](http://webpack.github.io/) loader use to compile [ejs](https://github.com/mde/ejs) templates.
+[webpack](https://webpack.js.org/) loader use to compile [ejs](https://github.com/mde/ejs) templates.
 
 ## Installation
 
@@ -8,7 +8,7 @@
 
 ## Usage
 
-[Documentation: Using loaders](http://webpack.github.io/docs/using-loaders.html)
+[Documentation: Using loaders](https://webpack.js.org/concepts/loaders/#using-loaders)
 
 ``` javascript
 var template = require("compile-ejs-loader!./file.ejs");
