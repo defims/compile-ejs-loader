@@ -15,7 +15,7 @@
     "testEnvironment": "node",
     "testPathIgnorePatterns": [
       "__tests__/lib/",
-      "__tests__/test-cases/"
+      "__tests__/test-data/"
     ]
   },
   "devDependencies": {
