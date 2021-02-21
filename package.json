@@ -1,6 +1,6 @@
 {
   "name": "compile-ejs-loader",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "webpack loader use to compile ejs templates (without frontend dependencies)",
   "author": "Long Wei",
   "license": "MIT",
